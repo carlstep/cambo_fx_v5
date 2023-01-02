@@ -16,6 +16,7 @@ class _DisplayFlagState extends State<DisplayFlag> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        // TODO - create function to select countryName from a list of countries.
         print(widget.countryName);
       },
       child: CircleAvatar(
