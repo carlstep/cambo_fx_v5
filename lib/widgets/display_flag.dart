@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DisplayFlag extends StatelessWidget {
+class DisplayFlag extends StatefulWidget {
   final String countryName;
 
   const DisplayFlag({
@@ -8,10 +8,20 @@ class DisplayFlag extends StatelessWidget {
   });
 
   @override
+  State<DisplayFlag> createState() => _DisplayFlagState();
+}
+
+class _DisplayFlagState extends State<DisplayFlag> {
+  @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: 30,
-      backgroundImage: AssetImage('assets/flags/$countryName.png'),
+    return GestureDetector(
+      onTap: () {
+        print(widget.countryName);
+      },
+      child: CircleAvatar(
+        radius: 30,
+        backgroundImage: AssetImage('assets/flags/${widget.countryName}.png'),
+      ),
     );
   }
 }

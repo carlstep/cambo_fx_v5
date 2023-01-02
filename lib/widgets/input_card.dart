@@ -1,3 +1,4 @@
+import 'package:cambo_fx_v5/widgets/display_flag.dart';
 import 'package:flutter/material.dart';
 
 class InputCard extends StatefulWidget {
@@ -42,11 +43,7 @@ class _InputCardState extends State<InputCard> {
           Positioned(
             top: 10,
             right: 0,
-            child: CircleAvatar(
-              radius: 30,
-              backgroundImage:
-                  AssetImage('assets/flags/${widget.countryName}.png'),
-            ),
+            child: DisplayFlag(countryName: widget.countryName),
           ),
         ],
       ),
