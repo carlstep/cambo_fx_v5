@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 
-class DisplayCard extends StatelessWidget {
+import './display_flag.dart';
+
+class DisplayCard extends StatefulWidget {
   final String countryName;
 
   const DisplayCard({required this.countryName});
 
+  @override
+  State<DisplayCard> createState() => _DisplayCardState();
+}
+
+class _DisplayCardState extends State<DisplayCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,10 +41,7 @@ class DisplayCard extends StatelessWidget {
           Positioned(
             top: 10,
             right: 0,
-            child: CircleAvatar(
-              radius: 30,
-              backgroundImage: AssetImage('assets/flags/$countryName.png'),
-            ),
+            child: DisplayFlag(countryName: widget.countryName),
           ),
         ],
       ),

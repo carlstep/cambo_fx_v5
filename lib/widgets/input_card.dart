@@ -1,5 +1,6 @@
-import 'package:cambo_fx_v5/widgets/display_flag.dart';
 import 'package:flutter/material.dart';
+
+import './display_flag.dart';
 
 class InputCard extends StatefulWidget {
   final String countryName;
