@@ -31,6 +31,7 @@ class _InputCardState extends State<InputCard> {
                 height: 60,
                 child: Center(
                   child: TextField(
+                    onChanged: ((value) {}),
                     controller: _inputController,
                     keyboardType:
                         const TextInputType.numberWithOptions(decimal: true),

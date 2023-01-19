@@ -1,3 +1,4 @@
+import 'package:cambo_fx_v5/widgets/displayflag_modal_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class DisplayFlag extends StatefulWidget {
@@ -16,7 +17,19 @@ class _DisplayFlagState extends State<DisplayFlag> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // TODO - create function to select countryName from a list of countries.
+        setState(() {
+          showModalBottomSheet(
+            context: context,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(20),
+              ),
+            ),
+            builder: (BuildContext context) {
+              return const DisplayFlagModal();
+            },
+          );
+        });
         print(widget.countryName);
       },
       child: CircleAvatar(
