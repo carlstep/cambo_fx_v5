@@ -20,7 +20,7 @@ class _DisplayFlagState extends State<DisplayFlag> {
         setState(() {
           showModalBottomSheet(
             context: context,
-            shape: RoundedRectangleBorder(
+            shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(
                 top: Radius.circular(20),
               ),
@@ -30,7 +30,7 @@ class _DisplayFlagState extends State<DisplayFlag> {
             },
           );
         });
-        print(widget.countryName);
+        widget.countryName;
       },
       child: CircleAvatar(
         radius: 30,

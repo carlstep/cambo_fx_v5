@@ -37,7 +37,7 @@ class _Page1State extends State<Page1> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Center(

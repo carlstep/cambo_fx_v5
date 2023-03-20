@@ -47,7 +47,10 @@ class _DisplayFlagModalState extends State<DisplayFlagModal> {
         ),
         ListTile(
           title: Text('SOUTH KOREA'),
-          onTap: () => _selectFlag('south_korea'),
+          onTap: () {
+            _selectFlag('south_korea');
+            print('south korea');
+          },
         ),
       ],
     );
