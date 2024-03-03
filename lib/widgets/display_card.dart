@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import './display_flag.dart';
@@ -5,7 +6,10 @@ import './display_flag.dart';
 class DisplayCard extends StatefulWidget {
   final String countryName;
 
-  const DisplayCard({required this.countryName});
+  const DisplayCard({
+    Key? key,
+    required this.countryName,
+  }) : super(key: key);
 
   @override
   State<DisplayCard> createState() => _DisplayCardState();
